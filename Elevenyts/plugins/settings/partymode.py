@@ -20,7 +20,7 @@ async def partymode_cmd(_, m: Message):
     
     if m.command[1].lower() == "on":
         party_chats.add(chat_id)
-        await m.reply("🎉 Party Mode ON! Ab har play ke baad sticker aayega! 🕺")
+        await m.reply("🎉 Party Mode ON!  play  sticker  🕺")
     else:
         party_chats.discard(chat_id)
         await m.reply("😴 Party Mode OFF!")

@@ -110,7 +110,7 @@ class Thumbnail:
             # Fixed bar to 40% for visual aesthetics
             draw.rounded_rectangle([right_x, bar_y, right_x + (right_w * 0.4), bar_y + 7], radius=4, fill=(255, 255, 255, 220))
 
-            badge_text = "MUSIC"
+            badge_text = "HAN THAR"
             bw = self.badge_font.getlength(badge_text) + 20
             draw.rounded_rectangle([center_x - (bw/2), bar_y - 12, center_x + (bw/2), bar_y + 18], radius=8, fill=(60, 60, 60, 220))
             draw.text((center_x - (bw/2) + 10, bar_y - 9), badge_text, font=self.badge_font, fill=(255, 255, 255))

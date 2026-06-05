@@ -20,12 +20,12 @@ class Inline:
         if status:
             # Status button ko Red (DANGER) kiya
             keyboard.append(
-                [self.ikb(text=status, callback_data=f"controls status {chat_id}", style=enums.ButtonStyle.PRIMARY)]
+                [self.ikb(text=status, callback_data=f"controls status {chat_id}")]
             )
         elif timer:
             # Timer button ko Red (DANGER) kiya
             keyboard.append(
-                [self.ikb(text=timer, callback_data=f"controls status {chat_id}", style=enums.ButtonStyle.DANGER)]
+                [self.ikb(text=timer, callback_data=f"controls status {chat_id}")]
             )
 
         if not remove:
@@ -117,10 +117,10 @@ class Inline:
         return self.ikm(
             [
                 [
-                    self.ikb(text="▷", callback_data=f"controls resume {chat_id}", style=enums.ButtonStyle.SUCCESS),
-                    self.ikb(text="∣ ∣", callback_data=f"controls pause {chat_id}", style=enums.ButtonStyle.PRIMARY),
-                    self.ikb(text=">>", callback_data=f"controls skip {chat_id}", style=enums.ButtonStyle.PRIMARY),
-                    self.ikb(text="▣", callback_data=f"controls stop {chat_id}", style=enums.ButtonStyle.DANGER),
+                    self.ikb(text="▷", callback_data=f"controls resume {chat_id}"),
+                    self.ikb(text="∣ ∣", callback_data=f"controls pause {chat_id}"),
+                    self.ikb(text=">>", callback_data=f"controls skip {chat_id}"),
+                    self.ikb(text="▣", callback_data=f"controls stop {chat_id}"),
                 ],
                 [
                     self.ikb(text="ᴅᴇʟᴇᴛᴇ", callback_data=f"controls close {chat_id}", style=enums.ButtonStyle.DANGER),
@@ -168,6 +168,7 @@ class Inline:
                 self.ikb(text=lang["support"], url=config.SUPPORT_CHAT, style=enums.ButtonStyle.PRIMARY), # Blue
                 self.ikb(text=lang["channel"], url=config.SUPPORT_CHANNEL, style=enums.ButtonStyle.PRIMARY), # Blue
             ],
+            [self.ikb(text="ADS CHANNEL", url="https://t.me/vip_king1999")],
         ]
         return self.ikm(rows)
 

@@ -332,7 +332,7 @@ class TgCall(PyTgCalls):
                     import time as time_module
                     played = media.time
                     duration = media.duration_sec
-                    bar_length = 12
+                    bar_length = 9
                     if duration == 0:
                         percentage = 0
                     else:

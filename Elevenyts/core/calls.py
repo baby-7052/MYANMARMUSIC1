@@ -328,32 +328,36 @@ class TgCall(PyTgCalls):
                     media.duration,
                     media.user,
                 )
-                if not media.is_live and media.duration_sec:
-                    import time as time_module
+            if not media.is_live and media.duration_sec:
+                import time as time_module
                     played = media.time
                     duration = media.duration_sec
+                    
+                    # ဒီ bar_length က ခလုတ်တစ်ခုလုံးရဲ့ အရွယ်အစားကို သတ်မှတ်ပေးတာပါ
                     bar_length = 7
-                    if duration == 0:
+                    
+              if duration == 0:
                         percentage = 0
-                    else:
+              else:
                         percentage = min((played / duration) * 100, 100)
+                    
+                    # ProgressBar နဲ့ ကားပုံကို စာလုံးအကျယ်ညီတဲ့ သင်္ကေတနဲ့ ပြင်ထားတယ်
                     filled = int(round(bar_length * percentage / 100))
-                    remaining = bar_length - filled - 1
-                    timer_bar = "▰" * filled + "⨷" + "▱" * (bar_length - filled) #timer_bar = "▰" * filled + "▰" + "▱" * (bar_length - filled)
-                    if duration >= 3600:
-                        played_time = time_module.strftime(
-                            '%H:%M:%S', time_module.gmtime(played))
-                        total_time = time_module.strftime(
-                            '%H:%M:%S', time_module.gmtime(duration))
-                    else:
-                        played_time = time_module.strftime(
-                            '%M:%S', time_module.gmtime(played))
-                        total_time = time_module.strftime(
-                            '%M:%S', time_module.gmtime(duration))
-                    timer_text = f"{played_time} {timer_bar} {total_time}"
+                    timer_bar = ("━" * filled) + "🚗" + ("━" * (bar_length - filled - 1))
+                    
+              if duration >= 3600:
+                        played_time = time_module.strftime('%H:%M:%S', time_module.gmtime(played))
+                        total_time = time_module.strftime('%H:%M:%S', time_module.gmtime(duration))
+               else:
+                        played_time = time_module.strftime('%M:%S', time_module.gmtime(played))
+                        total_time = time_module.strftime('%M:%S', time_module.gmtime(duration))
+                    
+                    # အရေးကြီးဆုံး: စာသားကို Backtick ` ` နဲ့ အုပ်လိုက်တာက စာလုံးအကျယ်ကို ငြိမ်သွားစေပါတယ်
+                    timer_text = f"`{played_time} {timer_bar} {total_time}`"
                     keyboard = buttons.controls(chat_id, timer=timer_text)
                 else:
                     keyboard = buttons.controls(chat_id)
+
 
                 if message:
                     try:

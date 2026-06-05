@@ -5,7 +5,7 @@ from Elevenyts import app
 
 # Stickers list
 PARTY_STICKERS = [
-    "CAACAgUAAyEFAATSD3CtAAII2GoMYhz9GDBgF7gTTWKrBa9b3F0iAAKpHQACvTpZVBMwEfUUJZSuHgQ",
+    "CAACAgUAAxkBAAIgLGmwNrkooAwI71aC1UFrROjuzGGJAAJ4GQACMQABoFVDxuEcxR1CQh4E",
 ]
 
 # ON hain jinke liye

@@ -328,7 +328,7 @@ class TgCall(PyTgCalls):
                     media.duration,
                     media.user,
                 )
-                        if not media.is_live and media.duration_sec:
+            if not media.is_live and media.duration_sec:
                 import time as time_module
                 played = media.time
                 duration = media.duration_sec

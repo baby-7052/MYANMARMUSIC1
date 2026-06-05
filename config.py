@@ -42,9 +42,9 @@ class Config:
 
         # ============ SUPPORT LINKS ============
         self.SUPPORT_CHANNEL: str = getenv(
-            "SUPPORT_CHANNEL", "https://t.me/galaxy_bots_update")
+            "SUPPORT_CHANNEL", "https://t.me/myanmarbot_music")
         self.SUPPORT_CHAT: str = getenv(
-            "SUPPORT_CHAT", "https://t.me/galaxysupportteam")
+            "SUPPORT_CHAT", "https://t.me/myanmar_music_bot2027")
 
         # ============ EXCLUDED CHATS ============
         self.EXCLUDED_CHATS: List[int] = self._parse_excluded_chats()
@@ -57,7 +57,7 @@ class Config:
         self.ASKAI_API_KEY: str = getenv("ASKAI_API_KEY", "")
         # ============ API CONFIGURATION ============
         self.YOUTUBE_API_URL: str = getenv(
-            "YOUTUBE_API_URL", "https://api.shrutibots.site")
+            "YOUTUBE_API_URL", "https://portal.arcmusic.fun/")
         self.SHRUTI_API_KEY: str = getenv("SHRUTI_API_KEY", "")
         # ============ SPOTIFY CONFIGURATION ============
         #self.SPOTIFY_CLIENT_ID: str = getenv("SPOTIFY_CLIENT_ID", "")
@@ -65,12 +65,12 @@ class Config:
 
         # ============ IMAGE URLS — ALL LISTS FOR RANDOM ============
         self.DEFAULT_THUMBS: List[str] = [
-            "https://drive.google.com/uc?id=165bJ_UImzvD6Xn5_ndrjpL6OdxWS5HYS",
+            "https://files.catbox.moe/jebxwm.jpg",
             
         ]
 
         self.PING_IMGS: List[str] = [
-            "https://drive.google.com/uc?id=165bJ_UImzvD6Xn5_ndrjpL6OdxWS5HYS",
+            "https://files.catbox.moe/4wdkm1.jpg",
             
         ]
 
@@ -88,7 +88,7 @@ class Config:
         ]
 
         self.RADIO_IMGS: List[str] = [
-            "https://drive.google.com/uc?id=165bJ_UImzvD6Xn5_ndrjpL6OdxWS5HYS",
+            "https://files.catbox.moe/jebxwm.jpg",
         ]
 
         # Single values — random pick karo (DEFAULT_THUMB ke liye)

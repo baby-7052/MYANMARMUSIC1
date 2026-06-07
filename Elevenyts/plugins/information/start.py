@@ -27,7 +27,7 @@ async def _help(_, m: types.Message):
         )
 
     try:
-        await m.react("🎶")
+        await m.react("")
     except Exception:
         pass
 
@@ -81,7 +81,7 @@ async def start(_, message: types.Message):
         )
 
     try:
-        await message.react("🎵")
+        await message.react("❤️")
     except Exception:
         pass
 
@@ -120,7 +120,7 @@ async def picoo_react(_, message: types.Message):
     except Exception:
         pass
     try:
-        await message.reply_text("la la la la 🎵")
+        await message.reply_text("Myanmar music 🎵")
     except Exception:
         pass
 
